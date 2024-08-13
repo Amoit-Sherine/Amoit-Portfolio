@@ -1,0 +1,87 @@
+@import './mixins';
+@import './variables';
+
+.Header {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    right: 20%;
+    transform: translate(-50%, -50%);
+    max-width: 425px; // Ensures the modal does not exceed 400px in width
+    padding: 20px;
+    color: $color-dark-slate-grey;
+    
+    .Header-name {
+       background-color: white;
+       position: fixed;
+       top: 3%;
+       left: 10%;
+      
+       width: 50%; // Start with a mobile-first width
+       border-radius: 20px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+       padding: 2%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       color: $color-dark-slate-grey;
+    }
+    .Header-additional {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    
+        > div {
+          background-color: white;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 10px;
+          margin-bottom: 10px; // Space between each section
+          width: 100%; // Ensures full width alignment
+          max-width: 200px; // Optional: Adjust as needed
+          text-align: center;
+        }
+    
+        .Header-about {
+          // Styles specific to the 'About Me' section
+        }
+    
+        .Header-projects {
+          // Styles specific to the 'Projects' section
+        }
+    
+        .Header-resume {
+          // Styles specific to the 'Resume' section
+        }
+    }
+    // Apply responsive widths for tablet and desktop
+    @include for-tablet {
+        // Adjust width for tablet devices
+      }
+    
+      @include for-desktop {
+        // Adjust width for desktop devices
+      }
+    
+      &__input, &__submit {
+        width: 100%;
+        padding: 8px 12px;
+        border: 1px solid $color-slate-grey;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+    
+      &__submit {
+        background-color: $color-vibrant-green;
+        border: none;
+        color: white;
+        cursor: pointer;
+    
+        &:hover {
+          background-color: darken($color-vibrant-green, 10%);
+        }
+      }
+}
