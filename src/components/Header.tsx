@@ -1,7 +1,14 @@
-import React from 'react';
-import './styles/Header.scss';
+import React, { useState } from 'react';
+import Projects from './Projects';
+import '../styles/Header.scss';
 
 function Header() {
+    const [showProjects, setShowProjects] = useState(false);
+
+    const handleProjectsClick = () => {
+        setShowProjects(true);
+    };
+
     return (
         <div className='Header'>
             <div className='Header-nav'>
@@ -11,11 +18,14 @@ function Header() {
                     </h1>
                 </div>
                 <div className='Header-links'>
-                    <a href='#projects' className='Header-link'>Projects</a>
+                    <a onClick={handleProjectsClick} className='Header-link'>Projects</a>
                     <a href='#resume' className='Header-link'>Resume</a>
                     <a href='#contact' className='Header-link'>Contact</a>
                 </div>
             </div>
+
+            {/* Conditionally render the Projects component */}
+            {showProjects && <Projects />}
         </div>
     );
 }

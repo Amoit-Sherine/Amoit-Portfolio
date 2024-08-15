@@ -65,6 +65,17 @@
                 }
             }
         }
+        @media (max-width: 768px) {
+            .Header-nav {
+                flex-direction: column;
+                width: 100%;
+            }
+        
+            .Projects {
+                top: calc(5% + 50px); /* Adjust as needed for smaller screens */
+                width: 100%;
+            }
+        }        
     }
 }
 

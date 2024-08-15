@@ -1,0 +1,42 @@
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.projects {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    width: 90%; /* Match this with the Header-nav width */
+    max-width: 1200px; /* Ensure it doesn't exceed a max width */
+    background-color: 246,238,227;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    animation: slideIn 0.5s ease-out forwards;
+    
+}
+.projects-list{
+    display: flex;
+    flex-direction: rows;
+    justify-content: space-between;
+    align-items: start;
+    
+
+}
+.projects-list_item{
+    margin: 20px;
+    list-style: none;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-sizing: border-box; 
+}
