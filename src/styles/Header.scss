@@ -12,6 +12,7 @@
 
     .Header-nav {
         display: flex;
+        position: fixed;
         justify-content: space-between;
         align-items: center;
         width: 90%; // Adjust width to fit within the screen
